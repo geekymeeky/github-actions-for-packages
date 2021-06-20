@@ -44,7 +44,7 @@ jobs:
           npm test
         env:
           CI: true
-    Build-and-Push-Docker-Image:
+  Build-and-Push-Docker-Image:
     runs-on: ubuntu-latest
     needs: test
     name: Docker Build, Tag, Push
@@ -65,4 +65,3 @@ jobs:
         registry: docker.pkg.github.com
         repository: geekymeeky/github-actions-for-packages/tic-tac-toe
         tag_with_sha: true
-          
